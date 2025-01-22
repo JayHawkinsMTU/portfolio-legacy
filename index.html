@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<header>
+    <h1>
+        Jay Hawkins
+    </h1>
+    <nav>
+        <div class="navlink" onclick="window.location.href = 'https://github.com/JayHawkinsMTU';">
+            <img src="assets/github.svg" style="width: 30px; fill: white" />
+            <h2>GitHub</h2>
+        </div>
+        <div class="navlink" onclick="window.location.href = 'https://www.linkedin.com/in/jakob-hawkins-a37421310/';">
+            <img src="assets/linkedin.svg" style="width: 30px; fill: white" />
+            <h2>LinkedIn</h2>
+        </div>
+    </nav>
+</header>
+
+<div class="livingroom">
+    <div class="tv">
+        <img src="assets/no_project.gif" class="vhsvideo" id="video" alt="project video">
+        <img src="assets/temp_tv_overlay.png" class="overlay" />
+        <img src="assets/eject.svg" class="eject" id="eject_button" onmouseover="hoverEject()"
+            onmouseleave="unhoverEject()" onclick="eject()" />
+        <div class="tape" id="example_project_tape" onclick="switchProject('example_project')"
+            style="left: calc(100% + 10px);">
+            <div class="tapelabelcontainer">
+                <div class="tapelabeltext">Project Name</div>
+            </div>
+        </div>
+        <div class="tape" id="squigley_tape" onclick="switchProject('squigley')" style="right: calc(100% + 10px)">
+            <div class="tapelabelcontainer">
+                <div class="tapelabeltext">Squigley</div>
+            </div>
+        </div>
+        <div class="tape" id="shortyshooters_tape" onclick="switchProject('shortyshooters')"
+            style="right: calc(100% + 110px);">
+            <div class="tapelabelcontainer">
+                <div class="tapelabeltext">Shorty Shooters</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div style="display: flex;">
+    <main>
+        <div id="no_project" class="visible">
+            <h1>NO PROJECT SELECTED</h1>
+            <p1>
+                To view a project and its description, select a VHS tape beside the screen.
+                You can also eject the tape to view this message again using the eject button below the screen to the
+                left.
+            </p1>
+            <h2>ABOUT THIS SITE</h2>
+            <p1>
+                To build a solid foundation of the fundementals of web development, I developed this site using the
+                vanilla technologies HTML, CSS, and JavaScript. This is also done to minimize maintenance and maximize
+                compatibility.
+                <br><br>
+                I always liked the look of technology from before my time or electronics that were more prominent during
+                my childhood. Such things like you see above like CRT TVs, VHS tapes, and old computers. I think these
+                things take you back to a time where technology was new and exciting and it also gives me an excuse to
+                let this website look bad because nearly all websites looked bad in the golden age.
+                <br><br>
+                Below is some sources of inspiration I took:
+            </p1>
+            <br>
+            <p1>TODO: INSPIRATION BOARD</p1>
+        </div>
+        <div id="example_project" class="hidden">
+            <h1>Example project</h1>
+            <p1>This project is so fucking dope man haha check this shit out look at that panda.</p1>
+        </div>
+        <div id="squigley" class="hidden">
+            <h1>SQUIGLEY</h1>
+            <h3>Actively Developed: August 2023 - August 2024</h3>
+            <span>
+                <img src="assets/githubblack.svg" style="height: 20px" />
+                <a href="https://github.com/JayHawkinsMTU/Squigley">GitHub</a>
+            </span>
+            <br>
+            <span>
+                <img src="assets/steamblack.svg" style="height: 20px" />
+                <a href="https://store.steampowered.com/app/2822670/Squigley/">Steam (Play for free!)</a>
+            </span>
+            <br>
+            <h2>Summary</h2>
+            <p1>
+                Squigley is a platforming game where you explore a massive 2D world, overcoming difficult obstacles
+                using unique movement
+                mechanics. The game was launched on Steam in August of 2024 after a year in development.
+            </p1>
+            <h2>Developing Squigley</h2>
+            <h3><i>Technologies used: C#, Unity</i></h3>
+            <p1>
+                I've developed Squigley during my first year in college. It started out as a very simple
+                project to tinker around with Unity. It uses C#, which is a very similar language to Java, which I was
+                currently taking
+                and intro class for. As I was just learning how to program, there's a lot of atrocities in this
+                codebase. Look closely
+                at the GitHub repo and you can probably spot a good few flaws. I got better at programming as the
+                project went on, but
+                making the game taught me many pitfalls to avoid through firsthand experience.
+                <br><br>
+                Though I didn't have much experience with video game art and music at the time, I created all of the art
+                and most of the
+                music on my own. The only exception to this was the "true-ending" credits song "Cattails", which I
+                recorded with some of
+                my high school friends that I was in a band with. I did this because I wanted the game to have a
+                cohesive art-style.
+                Though it was all very ametuer, I was happy with the result.
+                <br><br>
+                After launch, the game recieved a few updates to address user feedback and bug fixes. The game was
+                obviously not a huge
+                success, but I wanted to make it as complete and as good as possible. The game went free-to-play in
+                January of 2025.
+            </p1>
+        </div>
+        <div id="shortyshooters" class="hidden">
+            <h1>SHORTY SHOOTERS</h1>
+            <h3>Actively Developed: September 2024 - December 2024</h3>
+            <span>
+                <img src="assets/githubblack.svg" style="height: 20px" />
+                <a href="https://github.com/HuskyGameDev/2024f-team5">GitHub</a>
+            </span>
+            <br>
+            <span>
+                <img src="assets/itchio.svg" style="height: 20px" />
+                <a href="https://huskygamedev.itch.io/shorty-shooters">Itch.io</a>
+            </span>
+            <br>
+            <a href="shortyshooters/index.html">Play online!</a>
+            <h2>Summary</h2>
+            <img src="https://img.itch.zone/aW1hZ2UvMzEwODk3Ny8xODgyODc2NS5wbmc=/original/ehyvYc.png"
+                style="width: 50%; margin-top: 20px" />
+            <blockquote><em>The little guys are bringing out the&nbsp;big guns.</em></blockquote>
+            <p1>Shorty Shooters is an online multiplayer 2-Dimensional shooter game. The objective is to get the
+                most kills by staying in the ring and shooting your opponent while they're vulnerable. Where the game
+                shines is its unique movement mechanics, where you can use the gun's recoil in order to launch yourself
+                further.
+            </p1>
+            <h2>Developing Shorty Shooters</h2>
+            <h3><i>Technologies Used: Godot, GDScript</i></h3>
+            <p1>
+                Shorty Shooters was developed as a part of <a href="https://huskygames.com/">Husky Game Development</a>,
+                an organization at Michigan Technological University. The project took place over the course of one
+                semester, as many of the six group members didn't have space in their schedules to continue with the
+                project. I contributed mostly to programming the core gameplay loop and refining basic features like
+                movement and shooting, while also doing some of the environmental art and character spritework. In this
+                project, you can see the progress I've made in programming, game design, and pixel art since Squigley.
+                <br><br>
+                Some updates have been made since the end of the semester the game was created, but all team members
+                have moved on to work on other projects. You can download the game for free on <a
+                    href="https://huskygamedev.itch.io/shorty-shooters">itch.io</a> if you'd like to try it out.
+            </p1>
+            <h2>Credits</h2>
+            <p><strong>Developers</strong><br>Nolan Casey<br>Matthew Echols<br>Jay Hawkins<br>Nicholas Minor<br>Caleb
+                Werdon<br>Thomas Wilkins<br><strong>Art</strong><br>Matthew Echols<br>Jay
+                Hawkins<br><strong>Sound</strong><br>Music by Zach Brouckman<br>
+            </p>
+        </div>
+    </main>
+    <div class="sidebar">
+        <div class="sideelement" style="width: fit-content;">
+            <img src="assets/pfp.jpg" style="width: 200px; display: block; margin-left: auto; margin-right: auto; border-radius: 10%; filter: drop-shadow(0px 0px 3px black);" />
+        </div>
+        <div class="sideelement">
+            <h1>Contact</h1>
+            <span><img src="assets/email.svg" style="width:12px" />
+                <p1>jayhawkinsdev@gmail.com</p1>
+            </span>
+            <span><img src="assets/phone.svg" style="width:12px" />
+                <p1>If I want you to contact me by phone, my number will be on the resumé I gave you</p1>
+            </span>
+        </div>
+        <div class="sideelement">
+            <h1>About</h1>
+            <p1>
+                I am currently a computer science student at Michigan Technological University expecting to graduate in
+                2027. I was born in Ann Arbor, MI and grew up in the area until I graduated high school in 2023.
+                Currently, I am looking for new opportunities to contribute to a team, so if you're an employer
+                impressed by any of the projects on this site I threw together, please get in touch!
+                <br><br>
+                Some other things about me: I've played bass and guitar for a while and was a part of two rock bands and
+                I occasionally record some music. I also enjoy weight lifting and skateboarding and have also been
+                getting into snowboarding this past winter.
+                <br><br>
+                Fun fact: my <a href="https://www.youtube.com/@turbojaykay3365">YouTube</a> channel has nearly <i>1
+                    million</i>
+                views combined from all videos, though most of the views are from a stupid meme I uploaded years ago and
+                still gains some traction every now and then. I also put some of my projects there, so subscribe if
+                you'd like to see other stuff I work on.
+            </p1>
+        </div>
+    </div>
+</div>
+
+
+</html>
+
+<script>
+    var projects = {};
+    var curProject = document.getElementById("no_project");
+    var curProjectTape = null;
+    function switchProject(projectTitle) {
+        // Handle tv screen
+        document.getElementById("video").setAttribute("src", "assets/" + projectTitle + ".gif");
+        // Handle div containing project description
+        curProject.className = "hidden";
+        curProject = document.getElementById(projectTitle)
+        curProject.className = "visible";
+        // Handle tape animation
+        if (curProjectTape != null) {
+            curProjectTape.style["bottom"] = ""; // Original position
+            curProjectTape.style["opacity"] = "1";
+        }
+        // Eject - skip handling current tape
+        if (projectTitle == "no_project") {
+            curProjectTape = null;
+            return;
+        }
+        curProjectTape = document.getElementById(projectTitle + "_tape");
+        curProjectTape.style["bottom"] = "500px";
+        curProjectTape.style["opacity"] = "0";
+
+    }
+
+    function hoverEject() {
+        document.getElementById("eject_button").setAttribute("src", "assets/eject_hover.svg");
+    }
+
+    function unhoverEject() {
+        document.getElementById("eject_button").setAttribute("src", "assets/eject.svg");
+    }
+
+    function eject() {
+        switchProject("no_project");
+    }
+
+</script>
