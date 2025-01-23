@@ -8,6 +8,7 @@ body {
     background-image: url(assets/grime.png);
     background-attachment: fixed;
     position: static;
+    color: #181716;
     margin: 0px;
     font-family: "Ubuntu", monospace;
     /* prevent horizontal scrolling when using 100vw */
@@ -17,18 +18,15 @@ body {
 
 p {
     font-size: larger;
+    color: #181716;
 }
 
 img {
     margin-right: 10px;
 }
 
-li {
-    font-size: larger;
-}
-
 header {
-    background-color: #1c1712;
+    background-color: #181716;
     position: sticky;
     display: flex;
     top: 0;
@@ -52,26 +50,37 @@ nav {
 }
 
 main {
-    background-color: #ebdbb2;
+    background-color: #f2edd7;
     position: relative;
     width: 50%;
     margin-top: 10px;
     margin-left: auto;
-    height: 1500px;
+    padding-bottom: 10px;
+    height: 1000px;
     border-radius: 20px;
+    transition: height 1s;
+}
+
+footer {
+    background-color: #181716;
+    color: white;
+    padding: 20px;
+    text-align: right;
+    margin-top: 10px;
+    bottom: 0px;
 }
 
 .sidebar {
     position: relative;
     margin-top: 10px;
-    height: 1000px;
+    height: 100%;
     width: 25%;
     margin-left: 10px;
     margin-right: auto;
 }
 
 .sideelement {
-    background-color: #ebdbb2;
+    background-color: #f2edd7;
     width: 100%;
     height: fit-content;
     padding: 20px;
@@ -81,21 +90,21 @@ main {
 
 .navlink {
     display: flex;
+    color: white;
     margin: 10px;
-    background-color: #5a2c1b;
     padding: 1px 10px 1px 10px;
-    transition: background-color 0.25s;
+    transition: color 0.25s;
     user-select: none;
     cursor: pointer;
     border-radius: 15px;
 }
 
 .navlink:hover {
-    background-color: #3e0d0a;
+    color: grey;
 }
 
 .livingroom {
-    background-color: #2f2623;
+    background-color: #2a2727;
     width: 100vw;
     height: 480px;
     overflow: hidden;
@@ -111,6 +120,7 @@ main {
 .vhsvideo {
     position: absolute;
     height: 325px;
+    max-width: 460px;
     top: 20px;
 }
 
@@ -138,7 +148,7 @@ main {
 }
 
 .tape {
-    background-color: black;
+    background-color: #1d1d1d;
     background-image: url("assets/vhsspine.jpg");
     background-size: 100% 100%;
     /* prevent mousing over text */
@@ -155,7 +165,7 @@ main {
 
 .tape:hover {
     bottom: 35px;
-    filter: drop-shadow(0px 19px 3px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 15px 3px rgba(0, 0, 0, 0.5));
 }
 
 .tapelabelcontainer {
@@ -173,7 +183,7 @@ main {
 }
 
 .tapelabeltext {
-    color: black;
+    color: #181716;
     font-family: "Permanent Marker", serif;
     rotate: 180deg;
     font-size: 22pt;
@@ -184,6 +194,7 @@ main {
     margin: 25px;
     top: 0px;
     left: 0px;
+    right: 0px;
     visibility: visible;
     opacity: 1;
     /* I don't know where the extra y padding comes from, but this should offset it. */
@@ -194,6 +205,8 @@ main {
 .hidden {
     position: absolute;
     margin: 25px;
+    left: 0px;
+    right: 0px;
     visibility: hidden;
     opacity: 0;
     transform: translateY(50px);

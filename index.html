@@ -34,10 +34,14 @@
         <img src="assets/crt2.png" class="overlay" />
         <img src="assets/eject.svg" class="eject" id="eject_button" onmouseover="hoverEject()"
             onmouseleave="unhoverEject()" onclick="eject()" />
-        <div class="tape" id="example_project_tape" onclick="switchProject('example_project')"
-            style="left: calc(100% + 10px);">
+        <div class="tape" id="work_history_tape" onclick="switchProject('work_history')" style="left: 100%;">
             <div class="tapelabelcontainer">
-                <div class="tapelabeltext">Project Name</div>
+                <div class="tapelabeltext">Work History</div>
+            </div>
+        </div>
+        <div class="tape" id="misc_tape" onclick="switchProject('misc', 'misc.jpg')" style="left: calc(100% + 80px);">
+            <div class="tapelabelcontainer">
+                <div class="tapelabeltext">Misc</div>
             </div>
         </div>
         <div class="tape" id="squigley_tape" onclick="switchProject('squigley')" style="right: calc(100% + 10px)">
@@ -55,7 +59,7 @@
 
 </div>
 
-<div id="maincontainer" style="display: flex;">
+<div id="maincontainer" style="display: flex; height: 100%">
     <main>
         <div id="no_project" class="visible">
             <h1>NO TAPE SELECTED</h1>
@@ -68,7 +72,8 @@
             <p>
                 To build a solid foundation of the fundementals of web development, I developed this site using the
                 vanilla technologies HTML, CSS, and JavaScript. This is also done to minimize maintenance and maximize
-                compatibility.
+                compatibility. I also focused on making the website quick and responsive by containing as much
+                information as possible in one page.
                 <br><br>
                 As you can likely tell, the look of this site was inspired by old electronics from the 80s onwards.
                 <br><br>
@@ -76,9 +81,72 @@
                 complete.
             </p>
         </div>
-        <div id="example_project" class="hidden">
-            <h1>Example project</h1>
-            <p>This project is so fucking dope man haha check this shit out look at that panda.</p>
+        <div id="work_history" class="hidden" style="font-family:'Times New Roman', Times, serif; font-size: larger;">
+            <h1>WORK HISTORY</h1>
+            <span style="width: 100%; justify-content: space-between;">
+                <b>Student Academic Mentor</b>
+                <div style="text-align: right;">August 2024 - Present</div>
+            </span>
+            Michigan Technological University
+            <br>
+            Houghton, MI
+            <br>
+            <ul>
+                <li>Co-leader managing weekly mentoring sessions teaching college students Data Structures & Algorithms
+                </li>
+                <li>Broke attendance records of 20+ students by encouraging participation</li>
+                <li>Attendees of mentoring sessions had an average exam score 8% higher than the class average.</li>
+            </ul>
+            <br>
+            <span style="width: 100%; justify-content: space-between;">
+                <b>Camp Counselor</b>
+                <div style="text-align: right;">February 2023 - August 2023</div>
+            </span>
+            Chelsea School District
+            <br>
+            Chelsea, MI
+            <ul>
+                <li>Managed and entertained a large group of K-5 aged children for after-school and summer camp programs
+                </li>
+                <li>Facilitated events and field trips while maintaining order and safety</li>
+            </ul>
+        </div>
+        <div id="misc" class="hidden">
+            <h1>MISCELLANEOUS AND UNFINISHED PROJECTS</h1>
+            <h2>Wild West Waltz (formerly Rhythm Cowboy)</h2>
+            <h3>Developed Throughout Late 2024</h3>
+            <span>
+                <img src="assets/githubblack.svg" style="height: 20px" />
+                <a href="https://github.com/JayHawkinsMTU/Rhythm-Cowboy">GitHub</a>
+            </span>
+            <br>
+            <span>
+                <img src="assets/itchio.svg" style="height: 20px" />
+                <a href="https://jayhawkinsmtu.itch.io/rhythm-cowboy">Itch.io</a>
+            </span>
+            <p>
+                Developed using Unity, Wild West Waltz is a 2-player rhythm game about dueling cowboys who can only act
+                when "draw" is called by the metronome (or on other beats to reward good timing). What exists now is
+                ultimately just a prototype that I might return to one day. I began this game after I launched Squigley
+                and started with the objective of having more readable, reusable, and overall better code.
+            </p>
+            <img src="assets/wildwestwaltz.png" style="width: 300px;" />
+            <br>
+            <h2>Macro King</h2>
+            <h3>Actively Developed: October 2024 - December 2024</h3>
+            <span>
+                <img src="assets/githubblack.svg" style="height: 20px" />
+                <a href="https://github.com/JayHawkinsMTU/Macro-King">GitHub</a>
+            </span>
+            <p>
+                Macro King is a nutrition and fitness tracking app that was developed by me and five others for my
+                school's course <i>Team Software Project</i>. It was developed using Unity and C# because two of the
+                team members were familiar with it, but in hindsight I wish we used Android Studio or something more
+                focused on developing UI for mobile. Many members weren't familiar with C#, so I was often the acting
+                lead and trying to catch people up to speed.
+                <br><br>
+                To collaborate, we used GitHub and Jira. We also utilized Scrum methodologies throughout the project.
+            </p>
         </div>
         <div id="squigley" class="hidden">
             <h1>SQUIGLEY</h1>
@@ -163,6 +231,11 @@
                 movement and shooting, while also doing some of the environmental art and character spritework. In this
                 project, you can see the progress I've made in programming, game design, and pixel art since Squigley.
                 <br><br>
+                Our team developed Shorty Shooters while using agile methodologies and would document the process of
+                development every two-week sprint.
+                <br><br>
+                <a href="assets/HGD-Sprint4.pdf"><b>Work Sample</b></a>
+                <br><br>
                 Some updates have been made since the end of the semester the game was created, but all team members
                 have moved on to work on other projects. You can download the game for free on <a
                     href="https://huskygamedev.itch.io/shorty-shooters">itch.io</a> if you'd like to try it out.
@@ -199,14 +272,8 @@
             </ul>
             </p>
         </div>
-        <div class="sideelement" style="width: fit-content;">
-            <h1>Contact</h1>
-            <span><img src="assets/email.svg" style="width:12px" />
-                jayhawkinsdev@gmail.com
-            </span>
-        </div>
         <div class="sideelement">
-            <h1>About</h1>
+            <h1>About Jakob "Jay" Hawkins</h1>
             <p>
                 I am currently a computer science student at Michigan Technological University expecting to graduate in
                 2027. I was born in Ann Arbor, MI and grew up in the area until I graduated high school in 2023.
@@ -227,83 +294,15 @@
         </div>
     </div>
 </div>
+<footer>
+    <small>
+        This page is hosted via GitHub Pages
+        <br>
+        <b>Contact</b>: jayhawkinsdev@gmail.com
+    </small>
+</footer>
 
 
 </html>
 
-<script>
-    var projects = {};
-    var curProject = document.getElementById("no_project");
-    var curProjectTape = null;
-
-    function switchProject(projectTitle) {
-        // Handle tv screen
-        document.getElementById("video").setAttribute("src", "assets/" + projectTitle + ".gif");
-        // Handle div containing project description
-        curProject.className = "hidden";
-        curProject = document.getElementById(projectTitle)
-        curProject.className = "visible";
-        // Handle tape animation
-        if (curProjectTape != null) {
-            curProjectTape.style["bottom"] = ""; // Original position
-            curProjectTape.style["opacity"] = "1";
-        }
-        // Eject - skip handling current tape
-        if (projectTitle == "no_project") {
-            curProjectTape = null;
-            return;
-        }
-        curProjectTape = document.getElementById(projectTitle + "_tape");
-        curProjectTape.style["bottom"] = "500px";
-        curProjectTape.style["opacity"] = "0";
-
-    }
-
-    function hoverEject() {
-        document.getElementById("eject_button").setAttribute("src", "assets/eject_hover.svg");
-    }
-
-    function unhoverEject() {
-        document.getElementById("eject_button").setAttribute("src", "assets/eject.svg");
-    }
-
-    function eject() {
-        switchProject("no_project");
-    }
-
-    // Mobile device handling
-    const MOBILE_P_FONT_SIZE = "25pt";
-
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        // true for mobile device
-        mobileLayout();
-    }
-
-    function mobileLayout() {
-        var elements = document.getElementsByTagName("main");
-        // ADJUST MAIN
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style = "width: 90%; margin-left: auto; margin-right: auto; margin-top: 20px";
-        };
-        document.getElementById("maincontainer").style.display = "inline";
-        // SCALE FONT SIZE UP
-        document.getElementsByTagName("body")[0].style.fontSize = "x-large";
-        // SIDE ELEMENTS
-        var style = document.getElementById("sidebar").style;
-        style.width = "100%";
-        style.marginLeft = "auto";
-        style.marginRight = "auto";
-        style.marginTop = "20px";
-        elements = document.getElementsByClassName("sideelement");
-        for (var i = 0; i < elements.length; i++) {
-            style = elements[i].style;
-            style.width = "86%";
-            style.marginLeft = "auto";
-            style.marginRight = "auto";
-            style.marginTop = "20px"
-        }
-        document.getElementById("pfp").style.width = "90%";
-    }
-
-
-</script>
+<script src="logic.js"></script>
