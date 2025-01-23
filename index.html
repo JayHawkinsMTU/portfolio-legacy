@@ -13,17 +13,17 @@
         rel="stylesheet">
 </head>
 <header>
-    <h1>
+    <h1 style="margin-top: auto; margin-bottom: auto;">
         Jay Hawkins
     </h1>
     <nav>
         <div class="navlink" onclick="window.location.href = 'https://github.com/JayHawkinsMTU';">
             <img src="assets/github.svg" style="width: 30px; fill: white" />
-            <h2>GitHub</h2>
+            <h3>GitHub</h3>
         </div>
         <div class="navlink" onclick="window.location.href = 'https://www.linkedin.com/in/jakob-hawkins-a37421310/';">
             <img src="assets/linkedin.svg" style="width: 30px; fill: white" />
-            <h2>LinkedIn</h2>
+            <h3>LinkedIn</h3>
         </div>
     </nav>
 </header>
@@ -31,7 +31,7 @@
 <div class="livingroom">
     <div class="tv">
         <img src="assets/no_project.gif" class="vhsvideo" id="video" alt="project video">
-        <img src="assets/temp_tv_overlay.png" class="overlay" />
+        <img src="assets/crt2.png" class="overlay" />
         <img src="assets/eject.svg" class="eject" id="eject_button" onmouseover="hoverEject()"
             onmouseleave="unhoverEject()" onclick="eject()" />
         <div class="tape" id="example_project_tape" onclick="switchProject('example_project')"
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="tape" id="shortyshooters_tape" onclick="switchProject('shortyshooters')"
-            style="right: calc(100% + 110px);">
+            style="right: calc(100% + 90px);">
             <div class="tapelabelcontainer">
                 <div class="tapelabeltext">Shorty Shooters</div>
             </div>
@@ -55,34 +55,30 @@
 
 </div>
 
-<div style="display: flex;">
+<div id="maincontainer" style="display: flex;">
     <main>
         <div id="no_project" class="visible">
-            <h1>NO PROJECT SELECTED</h1>
-            <p1>
-                To view a project and its description, select a VHS tape beside the screen.
+            <h1>NO TAPE SELECTED</h1>
+            <p>
+                To view a section, select a VHS tape beside the TV screen.
                 You can also eject the tape to view this message again using the eject button below the screen to the
                 left.
-            </p1>
+            </p>
             <h2>ABOUT THIS SITE</h2>
-            <p1>
+            <p>
                 To build a solid foundation of the fundementals of web development, I developed this site using the
                 vanilla technologies HTML, CSS, and JavaScript. This is also done to minimize maintenance and maximize
                 compatibility.
                 <br><br>
-                I always liked the look of technology from before my time or electronics that were more prominent during
-                my childhood. Such things like you see above like CRT TVs, VHS tapes, and old computers. I think these
-                things take you back to a time where technology was new and exciting and it also gives me an excuse to
-                let this website look bad because nearly all websites looked bad in the golden age.
+                As you can likely tell, the look of this site was inspired by old electronics from the 80s onwards.
                 <br><br>
-                Below is some sources of inspiration I took:
-            </p1>
-            <br>
-            <p1>TODO: INSPIRATION BOARD</p1>
+                This website is currently under development and will be added to over time as more projects become
+                complete.
+            </p>
         </div>
         <div id="example_project" class="hidden">
             <h1>Example project</h1>
-            <p1>This project is so fucking dope man haha check this shit out look at that panda.</p1>
+            <p>This project is so fucking dope man haha check this shit out look at that panda.</p>
         </div>
         <div id="squigley" class="hidden">
             <h1>SQUIGLEY</h1>
@@ -97,15 +93,20 @@
                 <a href="https://store.steampowered.com/app/2822670/Squigley/">Steam (Play for free!)</a>
             </span>
             <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gvv5DZvdwHw?si=3EVnIPtcgw2H-3WI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
             <h2>Summary</h2>
-            <p1>
+            <p>
                 Squigley is a platforming game where you explore a massive 2D world, overcoming difficult obstacles
                 using unique movement
                 mechanics. The game was launched on Steam in August of 2024 after a year in development.
-            </p1>
+            </p>
             <h2>Developing Squigley</h2>
             <h3><i>Technologies used: C#, Unity</i></h3>
-            <p1>
+            <p>
                 I've developed Squigley during my first year in college. It started out as a very simple
                 project to tinker around with Unity. It uses C#, which is a very similar language to Java, which I was
                 currently taking
@@ -127,7 +128,7 @@
                 obviously not a huge
                 success, but I wanted to make it as complete and as good as possible. The game went free-to-play in
                 January of 2025.
-            </p1>
+            </p>
         </div>
         <div id="shortyshooters" class="hidden">
             <h1>SHORTY SHOOTERS</h1>
@@ -142,19 +143,19 @@
                 <a href="https://huskygamedev.itch.io/shorty-shooters">Itch.io</a>
             </span>
             <br>
-            <a href="shortyshooters/shortyshooters.html">Play online!</a>
+            <h1><a href="shortyshooters/shortyshooters.html">Play online!</a></h1>
             <h2>Summary</h2>
             <img src="https://img.itch.zone/aW1hZ2UvMzEwODk3Ny8xODgyODc2NS5wbmc=/original/ehyvYc.png"
                 style="width: 50%; margin-top: 20px" />
             <blockquote><em>The little guys are bringing out the&nbsp;big guns.</em></blockquote>
-            <p1>Shorty Shooters is an online multiplayer 2-Dimensional shooter game. The objective is to get the
+            <p>Shorty Shooters is an online multiplayer 2-Dimensional shooter game. The objective is to get the
                 most kills by staying in the ring and shooting your opponent while they're vulnerable. Where the game
                 shines is its unique movement mechanics, where you can use the gun's recoil in order to launch yourself
                 further.
-            </p1>
+            </p>
             <h2>Developing Shorty Shooters</h2>
             <h3><i>Technologies Used: Godot, GDScript</i></h3>
-            <p1>
+            <p>
                 Shorty Shooters was developed as a part of <a href="https://huskygames.com/">Husky Game Development</a>,
                 an organization at Michigan Technological University. The project took place over the course of one
                 semester, as many of the six group members didn't have space in their schedules to continue with the
@@ -165,7 +166,7 @@
                 Some updates have been made since the end of the semester the game was created, but all team members
                 have moved on to work on other projects. You can download the game for free on <a
                     href="https://huskygamedev.itch.io/shorty-shooters">itch.io</a> if you'd like to try it out.
-            </p1>
+            </p>
             <h2>Credits</h2>
             <p><strong>Developers</strong><br>Nolan Casey<br>Matthew Echols<br>Jay Hawkins<br>Nicholas Minor<br>Caleb
                 Werdon<br>Thomas Wilkins<br><strong>Art</strong><br>Matthew Echols<br>Jay
@@ -173,22 +174,40 @@
             </p>
         </div>
     </main>
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <div class="sideelement" style="width: fit-content;">
-            <img src="assets/pfp.jpg" style="width: 200px; display: block; margin-left: auto; margin-right: auto; border-radius: 10%; filter: drop-shadow(0px 0px 3px black);" />
+            <h1 style="margin-bottom: 2px; margin-top: 0px;" ;">Me</h1>
+            <img src="assets/terminator.png" id="pfp"
+                style="width: 200px; display: block; margin-left: auto; margin-right: auto; border-radius: 10%; filter: drop-shadow(0px 0px 3px black);" />
+            <small>(I'm the one on the left)</small>
         </div>
-        <div class="sideelement">
+        <div class="sideelement" id="education" style="width: fit-content">
+            <h1>Education</h1>
+            <h3>Michigan Technological University<br>
+                <small>Houghton, MI</small><br><small>August 2023 - April 2027</small>
+            </h3>
+            <p>GPA: 3.87 / 4.00</p>
+            <p>B.S. in Computer Science <br>Minor in Sound</p>
+            <p><b>Relevant Coursework:</b>
+            <ul>
+                <li>Data Structures & Algorithms</li>
+                <li>Discrete Structures</li>
+                <li>Programming at a Hardware/Software Interface</li>
+                <li>Computer Organization</li>
+                <li>Intro to Databases</li>
+                <li>Formal Models of Computing</li>
+            </ul>
+            </p>
+        </div>
+        <div class="sideelement" style="width: fit-content;">
             <h1>Contact</h1>
             <span><img src="assets/email.svg" style="width:12px" />
-                <p1>jayhawkinsdev@gmail.com</p1>
-            </span>
-            <span><img src="assets/phone.svg" style="width:12px" />
-                <p1>If I want you to contact me by phone, my number will be on the resumé I gave you</p1>
+                jayhawkinsdev@gmail.com
             </span>
         </div>
         <div class="sideelement">
             <h1>About</h1>
-            <p1>
+            <p>
                 I am currently a computer science student at Michigan Technological University expecting to graduate in
                 2027. I was born in Ann Arbor, MI and grew up in the area until I graduated high school in 2023.
                 Currently, I am looking for new opportunities to contribute to a team, so if you're an employer
@@ -198,12 +217,13 @@
                 I occasionally record some music. I also enjoy weight lifting and skateboarding and have also been
                 getting into snowboarding this past winter.
                 <br><br>
-                Fun fact: my <a href="https://www.youtube.com/@turbojaykay3365">YouTube</a> channel has nearly <i>1
+                <b>Fun fact</b>: my <a href="https://www.youtube.com/@turbojaykay3365">YouTube</a> channel has nearly
+                <i>1
                     million</i>
                 views combined from all videos, though most of the views are from a stupid meme I uploaded years ago and
                 still gains some traction every now and then. I also put some of my projects there, so subscribe if
                 you'd like to see other stuff I work on.
-            </p1>
+            </p>
         </div>
     </div>
 </div>
@@ -215,6 +235,7 @@
     var projects = {};
     var curProject = document.getElementById("no_project");
     var curProjectTape = null;
+
     function switchProject(projectTitle) {
         // Handle tv screen
         document.getElementById("video").setAttribute("src", "assets/" + projectTitle + ".gif");
@@ -249,5 +270,40 @@
     function eject() {
         switchProject("no_project");
     }
+
+    // Mobile device handling
+    const MOBILE_P_FONT_SIZE = "25pt";
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // true for mobile device
+        mobileLayout();
+    }
+
+    function mobileLayout() {
+        var elements = document.getElementsByTagName("main");
+        // ADJUST MAIN
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style = "width: 90%; margin-left: auto; margin-right: auto; margin-top: 20px";
+        };
+        document.getElementById("maincontainer").style.display = "inline";
+        // SCALE FONT SIZE UP
+        document.getElementsByTagName("body")[0].style.fontSize = "x-large";
+        // SIDE ELEMENTS
+        var style = document.getElementById("sidebar").style;
+        style.width = "100%";
+        style.marginLeft = "auto";
+        style.marginRight = "auto";
+        style.marginTop = "20px";
+        elements = document.getElementsByClassName("sideelement");
+        for (var i = 0; i < elements.length; i++) {
+            style = elements[i].style;
+            style.width = "86%";
+            style.marginLeft = "auto";
+            style.marginRight = "auto";
+            style.marginTop = "20px"
+        }
+        document.getElementById("pfp").style.width = "90%";
+    }
+
 
 </script>

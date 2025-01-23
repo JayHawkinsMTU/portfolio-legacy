@@ -1,5 +1,6 @@
 span {
     display: flex;
+    font-size: larger;
 }
 
 body {
@@ -14,12 +15,16 @@ body {
     overflow-y: scroll;
 }
 
-p1 {
-    font-size: large;
+p {
+    font-size: larger;
 }
 
 img {
     margin-right: 10px;
+}
+
+li {
+    font-size: larger;
 }
 
 header {
@@ -29,9 +34,12 @@ header {
     top: 0;
     color: white;
     max-width: 100%;
-    padding: 5px 40px 5px 40px;
+    padding: 5px 45px 5px 45px;
     z-index: 1;
-    ;
+}
+
+h1 {
+    margin-top: 0px;
 }
 
 nav {
@@ -56,7 +64,6 @@ main {
 .sidebar {
     position: relative;
     margin-top: 10px;
-    margin-left: auto;
     height: 1000px;
     width: 25%;
     margin-left: 10px;
@@ -74,12 +81,13 @@ main {
 
 .navlink {
     display: flex;
-    margin-left: 10px;
+    margin: 10px;
     background-color: #5a2c1b;
-    padding: 1px 20px 1px 10px;
+    padding: 1px 10px 1px 10px;
     transition: background-color 0.25s;
     user-select: none;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .navlink:hover {
@@ -101,8 +109,9 @@ main {
 }
 
 .vhsvideo {
-    height: 300px;
-    top: 100px
+    position: absolute;
+    height: 325px;
+    top: 20px;
 }
 
 .tv {
@@ -120,6 +129,8 @@ main {
 
 .eject {
     position: absolute;
+    background-color: #b1b7c5;
+    border-radius: 10px;
     height: 25px;
     top: 0;
     left: 0;
@@ -128,23 +139,26 @@ main {
 
 .tape {
     background-color: black;
+    background-image: url("assets/vhsspine.jpg");
+    background-size: 100% 100%;
     /* prevent mousing over text */
     user-select: none;
     position: absolute;
     bottom: 20px;
-    width: 90px;
-    height: 360px;
+    width: 70px;
+    height: 380px;
     user-select: none;
     cursor: pointer;
-    transition: bottom 0.5s, opacity 1s;
+    transition: bottom 0.5s, opacity 1s, filter 0.5s;
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
 .tape:hover {
     bottom: 35px;
+    filter: drop-shadow(0px 19px 3px rgba(0, 0, 0, 0.5));
 }
 
 .tapelabelcontainer {
-    background-color: beige;
     position: absolute;
     height: 70%;
     width: 80%;
@@ -167,7 +181,7 @@ main {
 
 .visible {
     position: absolute;
-    margin: 10px 25px 10px 25px;
+    margin: 25px;
     top: 0px;
     left: 0px;
     visibility: visible;
@@ -179,7 +193,7 @@ main {
 
 .hidden {
     position: absolute;
-    margin: 10px 25px 10px 25px;
+    margin: 25px;
     visibility: hidden;
     opacity: 0;
     transform: translateY(50px);
