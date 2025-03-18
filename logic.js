@@ -1,6 +1,9 @@
 var projects = {};
 var curProject = document.getElementById("no_project");
 var curProjectTape = null;
+
+eject();
+
 function switchProject(projectTitle, fileName = projectTitle + ".gif") {
     // Handle tv screen
     document.getElementById("video").setAttribute("src", "assets/" + fileName);
@@ -50,7 +53,7 @@ function mobileLayout() {
     var elements = document.getElementsByTagName("main");
     // ADJUST MAIN
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style = "width: 90%; margin-left: auto; margin-right: auto; margin-top: 20px";
+        elements[i].style = "width: 99%; margin-left: auto; margin-right: auto; margin-top: 20px";
     };
     document.getElementById("maincontainer").style.display = "inline";
     // SCALE FONT SIZE UP
@@ -64,10 +67,10 @@ function mobileLayout() {
     elements = document.getElementsByClassName("sideelement");
     for (var i = 0; i < elements.length; i++) {
         style = elements[i].style;
-        style.width = "86%";
+        style.width = "95%";
         style.marginLeft = "auto";
         style.marginRight = "auto";
         style.marginTop = "20px"
     }
-    document.getElementById("pfp").style.width = "90%";
+    document.getElementById("pfp").style.width = "95%";
 }
