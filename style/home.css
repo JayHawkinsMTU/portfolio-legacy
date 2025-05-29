@@ -6,6 +6,7 @@ body {
     border-style: solid;
     height: calc(100vh - 30px); /* Subtract total margin (top + bottom) */
     background-image: url(/assets/images/rainier_pd.jpg);
+    background-position-x: center;
     font-family: monospace;
     padding-left: 35px;
 }
@@ -16,13 +17,17 @@ header {
 }
 
 nav {
-    font-size: 25px;
+    font-size: xx-large;
 }
 
 .navitem {
-    transition: font-size 0.3s ease;
+    color: rgba(30, 30, 40, 0.9);
+    margin: 20px;
+    transition: font-size 0.3s;
+    cursor: pointer;
+    width: fit-content;
 }
 
 .navitem:hover {
-    font-size: 30px;
+    font-size: larger;
 }
