@@ -1,15 +1,17 @@
-var projects = {};
-var curProject = document.getElementById("no_project");
-var curProjectTape = null;
+const ejectButton: HTMLElement = document.getElementById("eject_button");
+
+var curProject: HTMLElement = document.getElementById("no_project");
+var curProjectTape: HTMLElement | null = null;
 
 eject();
 
-function switchProject(projectTitle, fileName = projectTitle + ".gif") {
+function switchProject(projectTitle: string): void {
+    const fileName: string = projectTitle + ".gif";
     // Handle tv screen
     document.getElementById("video").setAttribute("src", "assets/" + fileName);
     // Handle div containing project description
     curProject.className = "hidden";
-    curProject = document.getElementById(projectTitle)
+    curProject = document.getElementById(projectTitle);
     curProject.className = "visible";
     var height = curProject.offsetHeight;
     document.getElementsByTagName("main")[0].style.height = height + "px";
@@ -26,35 +28,44 @@ function switchProject(projectTitle, fileName = projectTitle + ".gif") {
     curProjectTape = document.getElementById(projectTitle + "_tape");
     curProjectTape.style["bottom"] = "500px";
     curProjectTape.style["opacity"] = "0";
-
 }
 
-function hoverEject() {
-    document.getElementById("eject_button").setAttribute("src", "assets/eject_hover.svg");
+// Hover on the eject button
+function hoverEject(): void {
+    ejectButton.setAttribute("src", "assets/eject_hover.svg");
 }
 
-function unhoverEject() {
-    document.getElementById("eject_button").setAttribute("src", "assets/eject.svg");
+function unhoverEject(): void {
+    ejectButton.setAttribute("src", "assets/eject.svg");
 }
 
-function eject() {
+function eject(): void {
     switchProject("no_project");
 }
 
 // Mobile device handling
 const MOBILE_P_FONT_SIZE = "25pt";
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+    )
+) {
     // true for mobile device
     mobileLayout();
 }
 
-function mobileLayout() {
-    var elements = document.getElementsByTagName("main");
+function mobileLayout(): void {
+    var elements: HTMLCollectionOf<HTMLElement> =
+        document.getElementsByTagName("main");
     // ADJUST MAIN
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style = "width: 99%; margin-left: auto; margin-right: auto; margin-top: 20px";
-    };
+        const style: CSSStyleDeclaration = elements[i].style;
+        style.width = "99%";
+        style.marginLeft = "auto";
+        style.marginRight = "auto";
+        style.marginTop = "20px";
+    }
     document.getElementById("maincontainer").style.display = "inline";
     // SCALE FONT SIZE UP
     document.getElementsByTagName("body")[0].style.fontSize = "x-large";
@@ -64,13 +75,15 @@ function mobileLayout() {
     style.marginLeft = "auto";
     style.marginRight = "auto";
     style.marginTop = "20px";
-    elements = document.getElementsByClassName("sideelement");
+    elements = document.getElementsByClassName(
+        "sideelement"
+    ) as HTMLCollectionOf<HTMLElement>;
     for (var i = 0; i < elements.length; i++) {
         style = elements[i].style;
         style.width = "95%";
         style.marginLeft = "auto";
         style.marginRight = "auto";
-        style.marginTop = "20px"
+        style.marginTop = "20px";
     }
     document.getElementById("pfp").style.width = "95%";
 }
