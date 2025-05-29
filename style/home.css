@@ -1,0 +1,24 @@
+body {
+    box-sizing: border-box;
+    margin: 15px;
+    border-color: rgba(210, 210, 230, 0.45);
+    border-radius: 2px;
+    border-style: solid;
+    height: calc(100vh - 30px); /* Subtract total margin (top + bottom) */
+    background-image: url(/public/images/rainier_pd.jpg);
+    font-family: monospace;
+    padding-left: 35px;
+}
+
+header {
+    font-size: 35px;
+    color: rgba(25, 25, 55, 0.9);
+}
+
+nav {
+    font-size: 25px;
+}
+
+.navitem:hover {
+    font-size-adjust: 10px;
+}
