@@ -8,7 +8,9 @@ eject();
 function switchProject(projectTitle: string): void {
     const fileName: string = projectTitle + ".gif";
     // Handle tv screen
-    document.getElementById("video").setAttribute("src", "assets/" + fileName);
+    document
+        .getElementById("video")
+        .setAttribute("src", "/public/gif/" + fileName);
     // Handle div containing project description
     curProject.className = "hidden";
     curProject = document.getElementById(projectTitle);
@@ -32,11 +34,11 @@ function switchProject(projectTitle: string): void {
 
 // Hover on the eject button
 function hoverEject(): void {
-    ejectButton.setAttribute("src", "assets/eject_hover.svg");
+    ejectButton.setAttribute("src", "/public/svg/eject_hover.svg");
 }
 
 function unhoverEject(): void {
-    ejectButton.setAttribute("src", "assets/eject.svg");
+    ejectButton.setAttribute("src", "/public/svg/eject.svg");
 }
 
 function eject(): void {
