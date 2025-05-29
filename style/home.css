@@ -5,7 +5,7 @@ body {
     border-radius: 2px;
     border-style: solid;
     height: calc(100vh - 30px); /* Subtract total margin (top + bottom) */
-    background-image: url(/public/images/rainier_pd.jpg);
+    background-image: url(/assets/images/rainier_pd.jpg);
     font-family: monospace;
     padding-left: 35px;
 }
@@ -19,6 +19,10 @@ nav {
     font-size: 25px;
 }
 
+.navitem {
+    transition: font-size 0.3s ease;
+}
+
 .navitem:hover {
-    font-size-adjust: 10px;
+    font-size: 30px;
 }

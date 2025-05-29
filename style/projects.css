@@ -5,7 +5,7 @@ span {
 
 body {
     background-color: #090223;
-    background-image: url(/public/images/grime.png);
+    background-image: url(/assets/images/grime.png);
     background-attachment: fixed;
     position: static;
     color: #181716;
@@ -163,7 +163,7 @@ ul {
 
 .tape {
     background-color: #1d1d1d;
-    background-image: url("/public/images/vhsspine.jpg");
+    background-image: url("/assets/images/vhsspine.jpg");
     background-size: 100% 100%;
     /* prevent mousing over text */
     user-select: none;
