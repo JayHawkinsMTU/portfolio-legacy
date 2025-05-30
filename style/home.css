@@ -1,23 +1,37 @@
+a {
+    text-decoration: none;
+}
+
 body {
     box-sizing: border-box;
-    margin: 15px;
+    margin: 35px;
     border-color: rgba(210, 210, 230, 0.45);
     border-radius: 2px;
     border-style: solid;
-    height: calc(100vh - 30px); /* Subtract total margin (top + bottom) */
+    height: calc(100vh - 70px); /* Subtract total margin (top + bottom) */
     background-image: url(/assets/images/rainier_pd.jpg);
     background-position-x: center;
-    font-family: monospace;
+    font-family: 'Times New Roman' monospace;
     padding-left: 35px;
+    display: flex;
 }
 
 header {
     font-size: 35px;
     color: rgba(25, 25, 55, 0.9);
+    text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav {
     font-size: xx-large;
+}
+
+main {
+    width: fit-content;
+}
+
+span {
+    display: flex;
 }
 
 .navitem {
@@ -30,4 +44,19 @@ nav {
 
 .navitem:hover {
     font-size: larger;
+}
+
+.side-panel {
+    background-color: rgba(228, 226, 212, 0.24);
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 10px;
+    width: 85ch;
+    max-width: 85ch;
+    opacity: 0;
+    height: 0px;
+    transition: all 0.5s ease-in-out;
 }
