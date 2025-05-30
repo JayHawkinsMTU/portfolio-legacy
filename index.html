@@ -14,10 +14,10 @@
             <nav>
                 <a href="projects/" class="navitem">projects</a>
                 <p onclick="switchPanel('work_history')" class="navitem">work</p>
-                <p class="navitem">contact</p>
+                <p onclick="switchPanel('contact')" class="navitem">contact</p>
             </nav>
         </main>
-        <div id="work_history" class="side-panel" >
+        <div id="work_history" class="side-panel" hidden>
             <span style="width: 100%; justify-content: space-between;">
                 <b>Software Engineer Intern</b>
                 <div style="text-align: right;">May 2025 - August 2025</div>
@@ -57,6 +57,10 @@
                 </li>
                 <li>Facilitated events and field trips while maintaining order and safety</li>
             </ul>
+        </div>
+        <div id="contact" class="side-panel" style="background: none; font-size: large; text-align: center;" hidden>
+            <h1>reach out</h1>
+            <p>email: j.hawk@tuta.io</p>
         </div>
     </body>
 </html>

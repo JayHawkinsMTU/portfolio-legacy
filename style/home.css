@@ -53,10 +53,9 @@ span {
     margin-right: 35px;
     margin-top: 35px;
     margin-bottom: 35px;
-    padding: 10px;
+    padding: 20px;
     width: 85ch;
     max-width: 85ch;
     opacity: 0;
     height: 0px;
-    transition: all 0.5s ease-in-out;
 }
