@@ -11,7 +11,7 @@ body {
     height: calc(100vh - 70px); /* Subtract total margin (top + bottom) */
     background-image: url(/assets/images/rainier_pd.jpg);
     background-position-x: center;
-    font-family: 'Times New Roman' monospace;
+    font-family: monospace;
     padding-left: 35px;
     display: flex;
 }
